@@ -1,8 +1,8 @@
-# terraform-gitlab-integration_telegram
+# terraform-gitlab-project_integration_telegram
 
 Terraform module to manage the following GitLab resources:
 
-* gitlab_integration_telegram
+* gitlab_project_integration_telegram
 
 ## Usage
 
@@ -10,9 +10,9 @@ Copy and paste the following code snippet to your Terraform configuration,
 specify the required variables and run the command `terraform init`.
 
 ```hcl
-module "gitlab_integration_telegram" {
-  source  = "gitlab.com/terraform-child-modules-48151/terraform-gitlab-integration-telegram/local"
-  version = "1.0.1"
+module "gitlab_project_integration_telegram" {
+  source  = "gitlab.com/terraform-child-modules-48151/terraform-gitlab-project-integration-telegram/local"
+  version = "2.0.0"
 
   confidential_issues_events = false
   confidential_note_events   = false
@@ -33,15 +33,15 @@ module "gitlab_integration_telegram" {
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_gitlab"></a> [gitlab](#requirement\_gitlab) | ~> 18.0 |
+| <a name="requirement_gitlab"></a> [gitlab](#requirement\_gitlab) | ~> 19.0 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_gitlab"></a> [gitlab](#provider\_gitlab) | ~> 18.0 |
+| ---- | ------- |
+| <a name="provider_gitlab"></a> [gitlab](#provider\_gitlab) | ~> 19.0 |
 
 ## Modules
 
@@ -50,13 +50,13 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
-| [gitlab_integration_telegram.this](https://registry.terraform.io/providers/gitlabhq/gitlab/latest/docs/resources/integration_telegram) | resource |
+| ---- | ---- |
+| [gitlab_project_integration_telegram.this](https://registry.terraform.io/providers/gitlabhq/gitlab/latest/docs/resources/project_integration_telegram) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_branches_to_be_notified"></a> [branches\_to\_be\_notified](#input\_branches\_to\_be\_notified) | Branches to send notifications for | `string` | `"default"` | no |
 | <a name="input_confidential_issues_events"></a> [confidential\_issues\_events](#input\_confidential\_issues\_events) | Enable notifications for confidential issues events | `bool` | n/a | yes |
 | <a name="input_confidential_note_events"></a> [confidential\_note\_events](#input\_confidential\_note\_events) | Enable notifications for confidential note events | `bool` | n/a | yes |
@@ -75,7 +75,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_id"></a> [id](#output\_id) | The ID of this Terraform resource |
 <!-- END_TF_DOCS -->
 

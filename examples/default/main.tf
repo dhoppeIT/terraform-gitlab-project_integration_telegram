@@ -1,4 +1,4 @@
-module "gitlab_integration_telegram" {
+module "gitlab_project_integration_telegram" {
   source = "../../"
 
   confidential_issues_events = false
